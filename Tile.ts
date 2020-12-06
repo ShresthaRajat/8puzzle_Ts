@@ -51,19 +51,15 @@ export class Tile {
         let new_index = index
 
         if (instruction == 'L') {
-            console.log("** left")
             new_index = index - 1
         }
         if (instruction == 'R') {
-            console.log("** right")
             new_index = index + 1
         }
         if (instruction == 'U') {
-            console.log("** up")
             new_index = index - 3
         }
         if (instruction == 'D') {
-            console.log("** down")
             new_index = index + 3
         }
         let x = childTile[new_index];
@@ -72,15 +68,3 @@ export class Tile {
         return childTile
     }
 }
-
-// const object_x = new Tile([], [1, 2, 3, 4, 5, 6, 7, 8, 9]);
-// object_x.addInstruction("right");
-// console.log(object_x.getSolved());
-// console.log(object_x.getMoves());
-// console.log(object_x.getChildTile("L"));
-// console.log(object_x.getChildTile("U"));
-// console.log(object_x.configuration)
-
-// const object_y = new Tile([], [5, 2, 3, 4, 9, 6, 1, 8, 7]);
-// console.log(object_y.getSolved());
-// console.log(object_y.getMoves());
