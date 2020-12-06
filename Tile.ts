@@ -1,4 +1,4 @@
-class Tiles {
+export class Tile {
     instructions: Array<String>;
     readonly configuration: Array<number>;
 
@@ -12,15 +12,15 @@ class Tiles {
     }
 
     getSolved() {
-        let cTiles = 0;
+        let cTile = 0;
         let counter = 1;
         for (let entry of this.configuration) {
             if (counter == entry) {
-                cTiles = cTiles + 1;
+                cTile = cTile + 1;
             }
             counter = counter + 1;
         }
-        if (cTiles >= 9) {
+        if (cTile >= 9) {
             return (true);
         }
         return (false);
@@ -73,7 +73,7 @@ class Tiles {
     }
 }
 
-// const object_x = new Tiles([], [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+// const object_x = new Tile([], [1, 2, 3, 4, 5, 6, 7, 8, 9]);
 // object_x.addInstruction("right");
 // console.log(object_x.getSolved());
 // console.log(object_x.getMoves());
@@ -81,6 +81,6 @@ class Tiles {
 // console.log(object_x.getChildTile("U"));
 // console.log(object_x.configuration)
 
-// const object_y = new Tiles([], [5, 2, 3, 4, 9, 6, 1, 8, 7]);
+// const object_y = new Tile([], [5, 2, 3, 4, 9, 6, 1, 8, 7]);
 // console.log(object_y.getSolved());
 // console.log(object_y.getMoves());
