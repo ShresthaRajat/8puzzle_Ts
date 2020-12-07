@@ -1,3 +1,5 @@
+// burrowed from: https://dev.to/glebirovich/typescript-data-structures-stack-and-queue-hld#queue
+
 interface IQueue<T> {
     enqueue(item: T): void;
     dequeue(): T;
@@ -22,16 +24,3 @@ export class Queue<T> implements IQueue<T> {
         return this.storage.length;
     }
 }
-
-// burrowed from: https://dev.to/glebirovich/typescript-data-structures-stack-and-queue-hld#queue
-
-// Examples:
-
-// const queue = new Queue<string>();
-
-// queue.enqueue("A");
-// queue.enqueue("B");
-
-// console.log(queue.size());    // Output: 2
-// console.log(queue.dequeue()); // Output: "A"
-// console.log(queue.size());    // Output: 1

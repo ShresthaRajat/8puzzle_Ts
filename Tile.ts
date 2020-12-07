@@ -9,7 +9,7 @@ export class Tile {
 
     addInstruction(instruction: String) {
         this.instructions.push(instruction);
-    }
+    }   
 
     getSolved() {
         let cTile = 0;
