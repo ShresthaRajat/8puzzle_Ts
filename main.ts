@@ -4,25 +4,28 @@ import { Queue } from './Queue.js'
 // for bfs
 
 const queue = new Queue<Tile>();
-const puzzle = new Tile([], [1, 2, 3, 4, 5, 6, 7, 9, 8]);
+const puzzle = new Tile([], [9, 2, 3, 4, 5, 6, 7, 1, 8]);
 let puzzleSet = new Set();
 queue.enqueue(puzzle);
 
 while (queue.size() > 0) {
     let received = queue.dequeue();
     let operations = received.instructions;
-    console.log(received);
-    if (received.getSolved() == true) {
-        console.log(operations)
+    if (received.getSolved()) {
+        console.log(operations.toString())
+        break
     }
     else {
-        console.log("not solved", received.configuration.toString());
-        puzzleSet.add(received.configuration);
-        console.log(received.getMoves());
+        puzzleSet.add(received.configuration.toString());
         for (let i of received.getMoves()) {
-            console.log(i);
-            let newTile = received.getChildTile(i);
-            console.log(newTile);
+            let newTileConfig = received.getChildTile(i);
+            let newtileIns = received.instructions.slice();
+            newtileIns.push(i);
+            let newTile = new Tile(newtileIns, newTileConfig);
+            console.log(newTile.configuration.toString(), queue.size());
+            if (!puzzleSet.has(newTile.configuration.toString())){
+                queue.enqueue(newTile);
+            }
         }
     }
 
