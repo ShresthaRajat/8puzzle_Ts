@@ -1,6 +1,8 @@
 {
 	"compilerOptions": {
-		// "target": "esnext",
+		"outDir": "./dist/",
+		"noImplicitAny": true,
+		"target": "esnext",
 		"watch": true,
 		"lib": [
 			"dom",
