@@ -4,7 +4,7 @@
   "description": "Typescript project to solve 8puzzle",
   "main": "Tile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean-js": "rm */*.js && rm -rf dist"
   },
   "repository": {
     "type": "git",
