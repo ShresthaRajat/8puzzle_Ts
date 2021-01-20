@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ShresthaRajat/8puzzle_Ts/issues"
   },
-  "homepage": "https://github.com/ShresthaRajat/8puzzle_Ts#readme"
+  "homepage": "https://github.com/ShresthaRajat/8puzzle_Ts#readme",
+  "dependencies": {
+    "typescript": "^4.1.3"
+  }
 }
