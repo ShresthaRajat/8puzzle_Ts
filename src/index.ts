@@ -1,5 +1,5 @@
-import { Tile } from './src/Tile.js'
-import { Queue } from './src/Queue.js'
+import { Tile } from './Tile.js'
+import { Queue } from './Queue.js'
 
 // for bfs
 
