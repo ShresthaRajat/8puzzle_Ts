@@ -4,7 +4,8 @@
   "description": "Typescript project to solve 8puzzle",
   "main": "Tile.js",
   "scripts": {
-    "clean-js": "rm */*.js && rm -rf dist"
+    "clean-js": "rm */*.js && rm -rf dist",
+    "build": "rm -rf dist && npx webpack"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,13 @@
     "url": "https://github.com/ShresthaRajat/8puzzle_Ts/issues"
   },
   "homepage": "https://github.com/ShresthaRajat/8puzzle_Ts#readme",
-  "dependencies": {},
+  "dependencies": {
+    "webpack": "^5.17.0"
+  },
   "devDependencies": {
     "ts-loader": "^8.0.14",
-    "typescript": "^4.1.3"
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3",
+    "webpack-cli": "^4.4.0"
   }
 }
